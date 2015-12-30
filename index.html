@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Reservation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+</head>
+<body>
+        <header>
+        <h1 class="logo">The Restaurant</h1>
+        <nav>
+            <ul>
+                <li><a href="#ContactUsSection">Contact</a></li>
+                <li><a href="#AboutUsDiv">About Us</a></li>
+                <li><a href="#LoginSection">Login</a></li>
+                <li><a href="#ReservationSection">Reservations</a></li>
+                <li><a href="#HomeSection">Home</a></li>
+
+            </ul>
+        </nav>
+        </header>
+    <section id="HomeSection">
+         <img id="myPhoto" src="WebContent/images/b3.jpg">
+        <h3 id="fixedTextOnSlider"></h3>
+         <script src="js/sliderscript.js"></script>
+    </section>
+    <section id="ReservationSection" class="ReservationSection">
+            <legend class="SectionLegend">Reservation Details</legend>
+            <form class="form" id="reservatiionform">
+                <div>
+                    <label  for="name"></label><input type="text" name="name" id="guest-name" class="InputBox" required autofocus placeholder="Please enter your name"><br>
+                </div>
+                <div>
+                    <label  for="email"></label><input type="text" name="email" id="guest-email" class="InputBox" required autofocus placeholder="Please enter your email"><br>
+                </div>
+                <div>
+                    <label  for="phone"></label><input type="tel" name="phone" id="guest-phone" class="InputBox" required autofocus placeholder="Please enter your phone number"><br>
+                </div>
+                <div>
+                    <label></label><input type="number" name="numberOfGuests" class="InputBox" min="1" max="10"required autofocus placeholder="Please enter the number of guests"><br>
+                </div>
+                <div>
+                    <label></label><input type="datetime-local" class="InputBox" required autofocus placeholder="Please enter the date and time of reservation"><br>
+                </div>
+                <div>
+                    <input class="SubmitButton" type="submit" id="reservationsubmit">
+                </div>
+            </form>
+    </section>
+     <section id="LoginSection" class="form">
+         <legend class="SectionLegend">Login</legend>
+         <form class="form" id="loginform">
+             <div>
+                 <label  for="username"></label><input type="text" name="usernname" id="username" class="InputBox" required autofocus placeholder="Please enter your Username"><br>
+             </div>
+             <div>
+                 <label  for="password"></label><input type="password" name="password" id="password" class="InputBox" required autofocus placeholder="Please enter your password"><br>
+             </div>
+             <div>
+                 <input class="SubmitButton" type="submit" id="loginsubmit">
+             </div>
+         </form>
+     </section>
+     <section id="AboutUsSection">
+            <legend class="SectionLegend"> About Us</legend>
+            <div id="AboutUsDiv">
+                <p id="AboutUsPara" class="Content">We guarantee you an excellent experience when you are in our service. Our finest food and classiest ambience will leave you enchanted. Established in 1913 <i>The Restaurant</i>
+                has continued its tradition of excellence till date. We are more than a restaurant, we are the foodie's paradise. This is a place where you could get delicious food at reasonable prices, and where you'll be treated right by people  who have a passion to serve. </p>
+            </div>
+     </section>
+        <section id="ContactUsSection">
+            <legend class="SectionLegend"> Contact Us</legend>
+            <div id="ContactUsDiv" class="Content">
+                <p>If you have a query please feel free to drop a line...</p><br>
+                <p>Email: therestaurant@res.com</p>
+                <p>Phone: 1234567890</p>
+            </div>
+        </section>
+<footer>
+    <small>&copySibtanu Raha, 2015</small>
+</footer>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("html,body").animate({scrollTop: 0}, 100); //100ms for example
+            });
+            window.onload = function() {
+                setTimeout (function () {
+                    scrollTo(0,0);
+                }, 100); //100ms for example
+            }
+        </script>
+</body>
+</html>
